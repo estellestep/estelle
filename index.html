@@ -27,6 +27,15 @@
      .mobileHide { display: none;}
   }
 </style>
+       <style type="text/css">
+        @media only screen and (min-width:600px) {
+            .hide-on-desktop, * [aria-labelledby='hide-on-desktop'] {
+                display: none;
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
+      </style>
 </head>
 <body>
 
@@ -34,7 +43,10 @@
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <div class="w3-center">
     <div class="mobileShow"> 
-<img src="ACE3F34A-0774-4DF3-9693-A94BA833B433.jpeg" style="width:75%">
+        <div class="hide-on-desktop" aria-labelledby="hide-on-desktop" style="mso-hide: all;">
+        <a href="https://www.litmus.com/"><img src="ACE3F34A-0774-4DF3-9693-A94BA833B433.jpeg" style="width:75%"></a>
+      </div>
+
 </div>
   <div class="mobileHide">
     <img src="8C841F0E-EA76-40A9-8E64-DD4A737E6828.jpeg" style="width:100%">
