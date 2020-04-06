@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-white.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
   <style type="text/css"> 
-  .mobileShow {display: none;} 
+ <head>
+    .mobileShow {display: none;} 
 
   /* Smartphone Portrait and Landscape */ 
   @media only screen 
@@ -16,6 +17,17 @@
       .mobileShow {display: inline;}
   }
 </style>
+  <style type="text/css">
+  .mobileHide { display: inline; } 
+
+  /* Smartphone Portrait and Landscape */ 
+  @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px){ 
+     .mobileHide { display: none;}
+  }
+</style>
+  </head>
 <body>
 
 <!-- Header -->
@@ -24,7 +36,9 @@
     <div class="mobileShow"> 
 <img src="ACE3F34A-0774-4DF3-9693-A94BA833B433.jpeg" style="width:60%">
 </div>
-  <img src="8C841F0E-EA76-40A9-8E64-DD4A737E6828.jpeg" style="width:100%">
+  <div class="mobileHide">
+    <img src="8C841F0E-EA76-40A9-8E64-DD4A737E6828.jpeg" style="width:100%">
+    </div>
     <div class="w3-padding-32">
    
     </div>
