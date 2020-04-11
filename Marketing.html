@@ -9,6 +9,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style type="text/css"> 
+    <style>
+* {
+  box-sizing: border-box;
+}
+​
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+​
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
  <head>
     .mobileShow {display: none;} 
 
@@ -144,8 +163,7 @@ c.parentNode.insertBefore(cp, c); })(); </script>
     <br>
   </div>
 </div>
-  
-    </div>
+</div>
     
     <div class="row">
   <div class="column">
@@ -293,21 +311,3 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
                               </scipt>
-<style>
-* {
-  box-sizing: border-box;
-}
-​
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-​
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
