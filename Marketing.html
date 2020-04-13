@@ -106,15 +106,16 @@
     <a href="Post2.1.html">
       <div class="w3-card w3-container" style="min-height:380px">
     <a href="Post2.1.html">
-    
- 
-<div id="cp_widget_43511fba-7995-4b2a-8e93-bcce9c992c26">...</div><script type="text/javascript">
-var cpo = []; cpo["_object"] ="cp_widget_43511fba-7995-4b2a-8e93-bcce9c992c26"; cpo["_fid"] = "AILA_pu41RvX";
-var _cpmp = _cpmp || []; _cpmp.push(cpo);
-(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-var c = document.getElementsByTagName("script")[0];
-c.parentNode.insertBefore(cp, c); })(); </script>
+<base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/">
+<div id="slider">
+<figure>
+<img src="austin-fireworks.jpg" alt>
+<img src="taj-mahal_copy.jpg" alt>
+<img src="ibiza.jpg" alt>
+<img src="ankor-wat.jpg" alt>
+<img src="austin-fireworks.jpg" alt>
+</figure>
+</div>
     <br>
   </div>
 </div>    
@@ -191,6 +192,54 @@ c.parentNode.insertBefore(cp, c); })(); </script>
     <br>
     <br>
 <style>
+  
+@keyframes slidy {
+2
+0% { left: 0%; }
+3
+20% { left: 0%; }
+4
+25% { left: -100%; }
+5
+45% { left: -100%; }
+6
+50% { left: -200%; }
+7
+70% { left: -200%; }
+8
+75% { left: -300%; }
+9
+95% { left: -300%; }
+10
+100% { left: -400%; }
+11
+}
+12
+​
+13
+body { margin: 0; } 
+14
+div#slider { overflow: hidden; }
+15
+div#slider figure img { width: 20%; float: left; }
+16
+div#slider figure { 
+17
+  position: relative;
+18
+  width: 500%;
+19
+  margin: 0;
+20
+  left: 0;
+21
+  text-align: left;
+22
+  font-size: 0;
+23
+  animation: 20s slidy infinite; 
+24
+}
   * {box-sizing:border-box}
 
 /* Slideshow container */
