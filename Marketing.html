@@ -106,7 +106,21 @@
     <a href="Post2.1.html">
       <div class="w3-card w3-container" style="min-height:380px">
     <a href="Post2.1.html">
-
+      
+      
+<div id="slideshow">
+   <div>
+     <img src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
+   </div>
+   <div>
+     <img src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
+   </div>
+   <div>
+     Pretty cool eh? This slide is proof the content can be anything.
+   </div>
+</div>
+      
+      
     <br>
   </div>
 </div>    
@@ -183,7 +197,22 @@ c.parentNode.insertBefore(cp, c); })(); </script>
     <br>
     <br>
 <style>
-  
+  #slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
 @keyframes slidy {
 2
 0% { left: 0%; }
@@ -355,3 +384,17 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
                               </scipt>
+  <script>
+                                
+                                $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+  
+    </script>
