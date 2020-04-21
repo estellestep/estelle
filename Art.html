@@ -129,7 +129,72 @@ c.parentNode.insertBefore(cp, c); })(); </script>
 
   <br>
 <style>
+  p.ex1 {
+  margin-bottom: -5px;
+}
+  #slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
 
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+@keyframes slidy {
+2
+0% { left: 0%; }
+3
+20% { left: 0%; }
+4
+25% { left: -100%; }
+5
+45% { left: -100%; }
+6
+50% { left: -200%; }
+7
+70% { left: -200%; }
+8
+75% { left: -300%; }
+9
+95% { left: -300%; }
+10
+100% { left: -400%; }
+11
+}
+12
+​
+13
+body { margin: 0; } 
+14
+div#slider { overflow: hidden; }
+15
+div#slider figure img { width: 20%; float: left; }
+16
+div#slider figure { 
+17
+  position: relative;
+18
+  width: 500%;
+19
+  margin: 0;
+20
+  left: 0;
+21
+  text-align: left;
+22
+  font-size: 0;
+23
+  animation: 20s slidy infinite; 
+24
+}
   * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -224,13 +289,9 @@ c.parentNode.insertBefore(cp, c); })(); </script>
   from {opacity: .4} 
   to {opacity: 1}
 }
-
-
- 
   </style>
   <script>
-    
-  var slideIndex = 1;
+    var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -257,26 +318,24 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
-}
-    var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none"; 
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1} 
-  slides[slideIndex-1].style.display = "block"; 
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</scipt>
-    
-  <style>
+                              </scipt>
+  <script>
                                 
-    .sidepanel {
+                                $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+  
+    </script>
+   <style>
+    
+.sidepanel {
   height: 375px; /* Specify a height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -326,10 +385,10 @@ function showSlides() {
 .openbtn:hover {
   background-color: #444;
 }
-</style>
-    
+
+  </style>
 <script>
-  
+/* Set the width of the sidebar to 250px (show it) */
 function openNav() {
   document.getElementById("mySidepanel").style.width = "250px";
 }
